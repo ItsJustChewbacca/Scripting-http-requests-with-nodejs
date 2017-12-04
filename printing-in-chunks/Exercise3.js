@@ -19,7 +19,7 @@ function getAndPrintHTML(options) {
 
 var mypara = {
   host: "sytantris.github.io",
-  path: "/http-examples/step2.html"
+  path: "/http-examples/step3.html"
 };
 
 getAndPrintHTML(mypara);
