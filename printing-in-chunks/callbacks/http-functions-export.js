@@ -1,18 +1,16 @@
 var https = require("https");
 
+//name: getHTML
+// cb is arbitrary; it cant lowercase uppercase reverse
 module.exports = function getHTML(options, callback) {
-  //var https = require("https");
-
   https.get(options, function(response) {
     response.setEncoding("utf8");
     let rawData = "";
     response.on("data", chunk => {
-      rawData += chunk;
+      callback(chunk);
     });
     response.on("end", () => {
-      callback(rawData);
+      console.log(rawData);
     });
   });
 };
-
-
